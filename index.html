@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>生成AIのチャレンジ シリーズ</title>
+    <meta name="description" content="生成AIを使ったことがない先生が、自分の仕事の困りごとを入口にして試せる6つのチャレンジ集です。">
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <style>
+      :root {
+        --ink: #203047;
+        --muted: #5c6878;
+        --paper: #fffdf7;
+        --surface: #fff;
+        --focus: #005fcc;
+        --line: #dce6e5;
+        --radius: 14px;
+        --shadow: 0 8px 24px rgb(32 48 71 / 10%);
+        --content-width: 900px;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        line-height: 1.7;
+        font-family: "BIZ UDPGothic", "Yu Gothic", sans-serif;
+        color: var(--ink);
+        background: var(--paper);
+      }
+
+      a { color: var(--focus); text-underline-offset: 0.2em; }
+
+      :focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 2px;
+      }
+
+      .skip-link {
+        position: absolute;
+        inset-inline-start: -9999px;
+      }
+      .skip-link:focus {
+        inset-inline-start: 1rem;
+        inset-block-start: 1rem;
+        z-index: 10;
+        padding: 0.6rem 1rem;
+        background: var(--surface);
+        border-radius: 0.4rem;
+      }
+
+      .hero {
+        padding: clamp(2rem, 6vw, 3.5rem) max(1.25rem, calc((100% - var(--content-width)) / 2));
+        color: #fff;
+        background: #234f58;
+      }
+
+      .hero h1 {
+        margin: 0 0 0.6rem;
+        font-size: clamp(1.4rem, 4.5vw, 2rem);
+        line-height: 1.35;
+      }
+
+      .hero__lead {
+        margin: 0;
+        font-size: 1.02rem;
+      }
+
+      .site-main {
+        max-width: var(--content-width);
+        margin-inline: auto;
+        padding: 1.5rem 1.25rem 3rem;
+      }
+
+      .intro p {
+        margin-block: 0 0.8rem;
+      }
+
+      .intro strong { font-weight: 700; }
+
+      h2 {
+        margin-block: 2rem 0.8rem;
+        font-size: 1.15rem;
+      }
+
+      .volumes {
+        display: grid;
+        gap: 0.9rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .volume {
+        display: block;
+        padding: 1rem 1.1rem;
+        border: 2px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        text-decoration: none;
+        color: inherit;
+        box-shadow: var(--shadow);
+      }
+
+      .volume:hover,
+      .volume:focus-visible {
+        border-color: var(--focus);
+      }
+
+      .volume__head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.2rem 0.6rem;
+      }
+
+      .volume__num {
+        font-size: 0.86rem;
+        color: var(--muted);
+      }
+
+      .volume__title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--focus);
+        text-decoration: underline;
+      }
+
+      .volume__for {
+        margin-block: 0.5rem 0.3rem;
+        font-weight: 700;
+      }
+
+      .volume__desc {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #33445a;
+      }
+
+      .volume__count {
+        margin-block-start: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      /* まだ公開していない巻。リンクにせず、来ることだけ伝える。 */
+      .volume--soon {
+        border-style: dashed;
+        box-shadow: none;
+        background: none;
+      }
+      .volume--soon .volume__title {
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .notes {
+        margin-block-start: 2.5rem;
+        padding: 1rem 1.1rem;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        font-size: 0.92rem;
+      }
+
+      .notes h2 {
+        margin-block-start: 0;
+        font-size: 1rem;
+      }
+
+      .notes ul {
+        margin: 0;
+        padding-inline-start: 1.2rem;
+      }
+
+      .notes li { margin-block-end: 0.4rem; }
+
+      footer {
+        max-width: var(--content-width);
+        margin-inline: auto;
+        padding: 0 1.25rem 2.5rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へスキップ</a>
+
+    <header class="hero">
+      <div>
+        <h1>生成AIのチャレンジ シリーズ</h1>
+        <p class="hero__lead">気になったものを、ひとつ試すところから。</p>
+      </div>
+    </header>
+
+    <main id="main" class="site-main" tabindex="-1">
+      <section class="intro">
+        <p>生成AIを使ったことがない先生が、<strong>自分の仕事の困りごとを入口にして</strong>試せるチャレンジ集です。</p>
+        <p>どれから始めてもかまいません。順番も速さも自由で、全部やる必要はありません。ランキングも提出もありません。</p>
+        <p><strong>AIの答えは完成品ではなく材料です。</strong>使うか、直すか、使わないかを決めるのは自分です。</p>
+      </section>
+
+      <h2>6つのチャレンジ</h2>
+
+      <ul class="volumes">
+        <li>
+          <a class="volume" href="https://kumaken-1.github.io/generative-ai-summer-research-30/">
+            <span class="volume__head">
+              <span class="volume__num">Ⅰ</span>
+              <span class="volume__title">生成AI 30のチャレンジⅠ</span>
+            </span>
+            <p class="volume__for">生成AIを使ったことがない方へ</p>
+            <p class="volume__desc">何ができる道具なのかを、読むのではなく、やって知る30回です。書く、整理する、広げる、確かめる、写真から考える。手を動かすうちに、使える場面の幅が見えてきます。</p>
+            <p class="volume__count">30回</p>
+          </a>
+        </li>
+
+        <li>
+          <a class="volume" href="https://kumaken-1.github.io/school-office-generative-ai-30/">
+            <span class="volume__head">
+              <span class="volume__num">Ⅱ</span>
+              <span class="volume__title">生成AI 30のチャレンジⅡ ～校務編～</span>
+            </span>
+            <p class="volume__for">書類や会議の仕事を軽くしたい方へ</p>
+            <p class="volume__desc">起案文書、行事の要項、依頼文、議事録、集計、保護者への説明。校務の文書を書く・まとめる・確かめる30回です。</p>
+            <p class="volume__count">30回</p>
+          </a>
+        </li>
+
+        <li>
+          <a class="volume" href="https://kumaken-1.github.io/lesson-improvement-ai-50/">
+            <span class="volume__head">
+              <span class="volume__num">Ⅲ</span>
+              <span class="volume__title">生成AI 50のチャレンジⅢ ～授業改善で使える生成AI～</span>
+            </span>
+            <p class="volume__for">授業のことで使ってみたい方へ</p>
+            <p class="volume__desc">授業改善のいろいろな場面を広く見わたす50回です。自己診断もついています。授業でどう使えるのかを、まず全体から知りたいときに。</p>
+            <p class="volume__count">50回・自己診断つき</p>
+          </a>
+        </li>
+
+        <li>
+          <a class="volume" href="https://kumaken-1.github.io/lesson-improvement-ai-30/">
+            <span class="volume__head">
+              <span class="volume__num">Ⅳ</span>
+              <span class="volume__title">生成AI 30のチャレンジⅣ ～授業改善を生成AIとの対話で進める～</span>
+            </span>
+            <p class="volume__for">授業をもう一歩深く見直したい方へ</p>
+            <p class="volume__desc">課題づくり、発問、子どもの見取り、交流、評価、授業後の見直し。同僚から実際に出た悩みをもとに、明日の授業で変える一点を見つける30回です。</p>
+            <p class="volume__count">30回</p>
+          </a>
+        </li>
+
+        <li>
+          <a class="volume" href="https://kumaken-1.github.io/inquiry-learning-ai-50/">
+            <span class="volume__head">
+              <span class="volume__num">Ⅴ</span>
+              <span class="volume__title">生成AI 50のチャレンジⅤ ～総合・生活科～</span>
+            </span>
+            <p class="volume__for">総合的な学習の時間と生活科で困っている方へ</p>
+            <p class="volume__desc">まちたんけん、生きものとのかかわり、地域の探究、子どもの問い。興味が立ち上がるところから、見取り・振り返りまでの5段階で並べた50回です。生活科と総合を同じ段階に並べてあります。</p>
+            <p class="volume__count">50回</p>
+          </a>
+        </li>
+
+        <li>
+          <div class="volume volume--soon">
+            <span class="volume__head">
+              <span class="volume__num">Ⅵ</span>
+              <span class="volume__title">生成AI 50のチャレンジⅥ ～カリキュラム・マネジメント～</span>
+            </span>
+            <p class="volume__for">1年の見通しや時数のことで困っている方へ</p>
+            <p class="volume__desc">目の前の困りごとを、1年・学年・教科横断という長い時間軸で組み替える50回です。<strong>準備中です。</strong></p>
+            <p class="volume__count">準備中</p>
+          </div>
+        </li>
+      </ul>
+
+      <section class="notes">
+        <h2>使うときの約束</h2>
+        <ul>
+          <li>児童・保護者・職員の名前や、個人が分かる情報、学校の機密情報は入力しません。名前は「児童A」などに置き換えます。</li>
+          <li>AIは、もっともらしい嘘を書きます。事実は元の資料や原典で確かめてください。</li>
+          <li>入力した言葉は、どの巻も保存しません。「やってみた」の印だけが、使っている端末に残ります。<strong>記録は巻ごとに別々です。</strong></li>
+          <li>生成AIを開けないときは、文章を読んで「どんな回答が来そうか」を考えるだけでもかまいません。</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>本文などのコンテンツは CC BY 4.0、コードは MIT License です。各巻のページに詳しく書いてあります。</p>
+    </footer>
+  </body>
+</html>
