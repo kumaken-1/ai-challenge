@@ -9,7 +9,7 @@
 | 巻 | 題名 | 誰向け | 回数 |
 |---|---|---|---|
 | Ⅰ | [生成AI 30のチャレンジⅠ](https://kumaken-1.github.io/generative-ai-summer-research-30/) | 生成AIを使ったことがない方、前に試してやめた方へ | 30 |
-| Ⅱ | [生成AI 30のチャレンジⅡ ～校務編～](https://kumaken-1.github.io/school-office-generative-ai-30/) | 書類や会議の仕事を軽くしたい方へ | 30 |
+| Ⅱ | [生成AI 30のチャレンジⅡ～校務編～](https://kumaken-1.github.io/school-office-generative-ai-30/) | 書類や会議の仕事を軽くしたい方へ | 30 |
 | Ⅲ | [生成AI 50のチャレンジⅢ ～授業改善で使える生成AI～](https://kumaken-1.github.io/lesson-improvement-ai-50/) | 授業のことで使ってみたい方へ | 50 |
 | Ⅳ | [生成AI 30のチャレンジⅣ ～授業改善を生成AIとの対話で進める～](https://kumaken-1.github.io/lesson-improvement-ai-30/) | 授業をもう一歩深く見直したい方へ | 30 |
 | Ⅴ | [生成AI 50のチャレンジⅤ ～総合・生活科～](https://kumaken-1.github.io/inquiry-learning-ai-50/) | 総合的な学習の時間と生活科で困っている方へ | 50 |
@@ -26,9 +26,17 @@
 - **各巻は統合していません。**それぞれ独立したページで、これまでに配ったURLはすべて生き続けます。
 - **記録は巻ごとに別々です。**「やってみた」の印は使っている端末に残りますが、巻をまたいで混ざりません。
 
-## 更新するとき
+## 巻が増えたとき
 
-`index.html` の1ファイルだけです。ビルドはありません。巻が増えたときは、カードを1つ足して、`README.md` の表にも1行足してください。
+各巻の情報は `data/volumes.json` に1件だけ持っています。これまでは新刊のたびに、このリポジトリの `index.html`・`README.md` に加えて、既刊9サイトそれぞれのヘッダーも手作業で直していました（直し漏れが起きやすい）。今は次の手順です。
+
+1. `data/volumes.json` に新しい巻を1件追加する
+2. 既刊の各サイトをこのリポジトリの隣にクローンする（例: `gh repo clone kumaken-1/<repo>`）
+3. `node tools/publish-volume.mjs --sites <クローンを置いたディレクトリ>` を実行する
+   - このリポジトリの `index.html`・`README.md`（カード・表・「n冊nn回」表記）と、既刊各サイトのヘッダー `<ul class="volumes__list">` を一括で書き換える
+   - Ⅲ（`lesson-improvement-ai-50`）は単一HTML構成のため対象外。`docs/生成AIの使い方指南.html` を直接編集し、`node tools/build-print.mjs` を実行する（そのリポジトリ側の手順）
+4. `node tools/verify-volumes.mjs <クローンを置いたディレクトリ>` で、生成結果と実際の内容が一致することを確認する
+5. 変更が正しければ、このリポジトリと、書き換えた各サイトのリポジトリをそれぞれ commit・push する
 
 ## ライセンス
 

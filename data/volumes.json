@@ -1,0 +1,113 @@
+[
+  {
+    "roman": "Ⅰ",
+    "repo": "generative-ai-summer-research-30",
+    "url": "https://kumaken-1.github.io/generative-ai-summer-research-30/",
+    "title": "生成AI 30のチャレンジⅠ",
+    "navLabel": "Ⅰ　はじめて",
+    "audience": "生成AIを使ったことがない方、前に試してやめた方へ",
+    "desc": "何ができる道具なのかを、読むのではなく、やって知る30回です。書く、整理する、広げる、確かめる、写真から考える。手を動かすうちに、使える場面の幅が見えてきます。",
+    "count": "30回",
+    "rounds": 30
+  },
+  {
+    "roman": "Ⅱ",
+    "repo": "school-office-generative-ai-30",
+    "url": "https://kumaken-1.github.io/school-office-generative-ai-30/",
+    "title": "生成AI 30のチャレンジⅡ～校務編～",
+    "navLabel": "Ⅱ　校務",
+    "audience": "書類や会議の仕事を軽くしたい方へ",
+    "desc": "起案文書、行事の要項、依頼文、議事録、集計、保護者への説明。校務の文書を書く・まとめる・確かめる30回です。",
+    "count": "30回",
+    "rounds": 30
+  },
+  {
+    "roman": "Ⅲ",
+    "repo": "lesson-improvement-ai-50",
+    "url": "https://kumaken-1.github.io/lesson-improvement-ai-50/",
+    "title": "生成AI 50のチャレンジⅢ ～授業改善で使える生成AI～",
+    "navLabel": "Ⅲ　授業改善",
+    "audience": "授業のことで使ってみたい方へ",
+    "desc": "授業改善のいろいろな場面を広く見わたす50回です。自己診断もついています。授業でどう使えるのかを、まず全体から知りたいときに。",
+    "count": "50回・自己診断つき",
+    "rounds": 50,
+    "special": "単一HTML構成。docs/生成AIの使い方指南.html が正本で、node tools/build-print.mjs で docs/index.html を作り直す。このrepoの index.html を直接編集しない。"
+  },
+  {
+    "roman": "Ⅳ",
+    "repo": "lesson-improvement-ai-30",
+    "url": "https://kumaken-1.github.io/lesson-improvement-ai-30/",
+    "title": "生成AI 30のチャレンジⅣ ～授業改善を生成AIとの対話で進める～",
+    "navLabel": "Ⅳ　授業改善を深く",
+    "audience": "授業をもう一歩深く見直したい方へ",
+    "desc": "課題づくり、発問、子どもの見取り、交流、評価、授業後の見直し。同僚から実際に出た悩みをもとに、明日の授業で変える一点を見つける30回です。",
+    "count": "30回",
+    "rounds": 30
+  },
+  {
+    "roman": "Ⅴ",
+    "repo": "inquiry-learning-ai-50",
+    "url": "https://kumaken-1.github.io/inquiry-learning-ai-50/",
+    "title": "生成AI 50のチャレンジⅤ ～総合・生活科～",
+    "navLabel": "Ⅴ　総合・生活科",
+    "audience": "総合的な学習の時間と生活科で困っている方へ",
+    "desc": "まちたんけん、生きものとのかかわり、地域の探究、子どもの問い。興味が立ち上がるところから、見取り・振り返りまでの5段階で並べた50回です。生活科と総合を同じ段階に並べてあります。",
+    "count": "50回",
+    "rounds": 50
+  },
+  {
+    "roman": "Ⅵ",
+    "repo": "curriculum-management-ai-50",
+    "url": "https://kumaken-1.github.io/curriculum-management-ai-50/",
+    "title": "生成AI 50のチャレンジⅥ ～カリキュラム・マネジメント～",
+    "navLabel": "Ⅵ　1年を組み替える",
+    "audience": "1年の見通しや時数のことで困っている方へ",
+    "desc": "去年の計画の日付を直して出しているだけ。時数が足りないと総合が削られる。国語で教えたのに総合でまた一から教えている。目の前の困りごとを、1年・学年・教科横断・学校全体という長さで組み替える50回です。",
+    "count": "50回",
+    "rounds": 50
+  },
+  {
+    "roman": "Ⅶ",
+    "repo": "classroom-community-ai-30",
+    "url": "https://kumaken-1.github.io/classroom-community-ai-30/",
+    "title": "生成AI 30のチャレンジⅦ ～学級経営～",
+    "navLabel": "Ⅶ　学級経営",
+    "audience": "授業以外の学級の過ごし方で困っている方へ",
+    "desc": "「わかりません」と言えない教室。学級会で結局先生が決めてしまう。同じ子が何度も注意される。朝の会から帰りの会まで、授業の外の学級生活を見直す30回です。",
+    "count": "30回",
+    "rounds": 30
+  },
+  {
+    "roman": "Ⅷ",
+    "repo": "school-events-ai-30",
+    "url": "https://kumaken-1.github.io/school-events-ai-30/",
+    "title": "生成AI 30のチャレンジⅧ ～特別活動・児童会・学校行事～",
+    "navLabel": "Ⅷ　特別活動・行事",
+    "audience": "児童会・学級会・学校行事の進め方で困っている方へ",
+    "desc": "「やりたいことある？」と聞いても出てこない。多数決で負けた側が不満そう。行事前になると毎日「練習、練習」になっている。児童会・学級会・学校行事を通して、子どもが学校生活をつくる側になる経験を見直す30回です。",
+    "count": "30回",
+    "rounds": 30
+  },
+  {
+    "roman": "Ⅸ",
+    "repo": "newsletter-ai-30",
+    "url": "https://kumaken-1.github.io/newsletter-ai-30/",
+    "title": "生成AI 30のチャレンジⅨ ～学級通信・学年通信～",
+    "navLabel": "Ⅸ　学級通信・学年通信",
+    "audience": "学級通信・学年通信の書き方で困っている方へ",
+    "desc": "通信を書こうと思ったけど何も浮かばない。また「優しい姿が見られました」と書きそう。通信をAIに丸ごと書かせるのではなく、見た事実を材料に選ぶ・整理する・読み直す30回です。",
+    "count": "30回",
+    "rounds": 30
+  },
+  {
+    "roman": "付録",
+    "repo": "bonus-challenge-ai-50",
+    "url": "https://kumaken-1.github.io/bonus-challenge-ai-50/",
+    "title": "生成AI 50のチャレンジ付録～えっ！こんな使い方ができるの？編～",
+    "navLabel": "チャレンジ付録　こんな使い方も",
+    "audience": "仕事でも学習でもなく、私生活でふらっと生成AIを使ってみたい方へ",
+    "desc": "冷蔵庫の写真から献立、スクショの比較、まとまっていない話の整理、AIに逆に質問してもらう。準備せず、写真やスクショ、話し言葉をそのまま渡してよいと知る50回です。1回送って、回答を読んだら、そこで終えてもかまいません。",
+    "count": "50回",
+    "rounds": 50
+  }
+]
